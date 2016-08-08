@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.commontime.cordova.ios-keyboard-fix"
+        version="1.0.0">
+
+  <name>Keyboard Fix</name>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="KeyboardFix">
+        <param name="ios-package" value="KeyboardFix" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/NSObject+KeyboardBUI.h"/>
+    <source-file src="src/ios/NSObject+KeyboardBUI.m"/>
+    <header-file src="src/ios/UIView+FirstResponder.h"/>
+    <source-file src="src/ios/UIView+FirstResponder.m"/>
+  </platform>
+</plugin>
